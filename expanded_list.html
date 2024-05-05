@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanded Digital Media List</title>
+</head>
+<body>
+<h2> My curated media favs </h2>
+<ul id="reading-list">
+</ul>
+
+<script>
+  // Array of media items
+  const mediaItems = [
+    { 
+      title: "PORTLAND, Maine: Gloomy, Grey & Beautiful", 
+      url: "https://youtu.be/uSHrpVmqkWQ?si=Ef-7xRbkA5TEfAlk"
+    },
+    { 
+      title: "The NEET Revolution: Why NEETs Will Change the World", 
+      url: "https://www.countere.com/home/the-neet-revolution-why-neets-will-change-world"
+    },
+    { 
+      title: "Suicide Forums in a Dying Society", 
+      url: "https://www.countere.com/home/sanctioned-suicide-incel-forum-dying-society?utm_source=pocket_reader"
+    },
+    { 
+      title: "The Inner Earth : My Secret Diary : Admiral Richard B. Byrd's Diary (February-March 1947)", 
+      url: "https://www.bibliotecapleyades.net/tierra_hueca/esp_tierra_hueca_2d.htm?utm_source=pocket_reader"
+	},
+	{
+	  title: "Kumari Kandam", 
+      url: "https://en.wikipedia.org/wiki/Kumari_Kandam" 
+    },
+	{
+	  title: "A Train Odyssey 4, Part 1, AMTRAK 'City of New Orleans'", 
+      url: "https://www.youtube.com/watch?v=NF_hQ8Ek1qw" 
+    }
+	
+    // Add more media items here if needed
+  ];
+
+  // Function to populate the list
+  function populateList() {
+    const list = document.getElementById("reading-list");
+    mediaItems.forEach(item => {
+      const listItem = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.textContent = item.title;
+      listItem.appendChild(link);
+      list.appendChild(listItem);
+    });
+  }
+
+  // Call the function to populate the list when the page loads
+  window.onload = populateList;
+</script>
+
+</body>
+</html>
